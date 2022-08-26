@@ -51,10 +51,10 @@
             <p>
               Analizzando il contesto di applicazione, ovvero il fatto che i
               problemi da risolvere erano quelli dati dalla scuola e la
-              soluzione di essi consisteva nel trovare la radice quadrata e se un
-              numero intero ovvero un "quadrato perfetto", si scriveva quel risultato, al contro se decimale
-              bastava racchiudere il "quadrato non perfetto" in una radice
-              quadrata.
+              soluzione di essi consisteva nel trovare la radice quadrata e se
+              un numero intero ovvero un "quadrato perfetto", si scriveva quel
+              risultato, al contro se decimale bastava racchiudere il "quadrato
+              non perfetto" in una radice quadrata.
             </p>
             <p>
               I più le cifre dei problemi non superavano mai il 10000, ovvero il
@@ -148,35 +148,91 @@
                 >inferiore di 64(8<sup>2</sup>)</span
               >
             </p>
-            <p>notiamo anche che 57 è piu vicino a <span class="bg-success" style="--bs-bg-opacity: 0.5"
-              >64</span> che non <span class="bg-danger" style="--bs-bg-opacity: 0.5"
-              >49</span>, infatti:</p>
-              <ul>
-                <li><span class="bg-success" style="--bs-bg-opacity: 0.5">64-57=7</li>
-                <li><span class="bg-danger" style="--bs-bg-opacity: 0.5">57-49=8</li>
-              </ul>
-            <p>Percui è facilmente intuibile che abbiamo trovato un valore compreso tra 70 e 80, per cui abbiamo trovato la nostra decina della soluzione.</p>
-            <p>Mentre per l'unità guardiamo semplicemente l'unità di 577<span class="bg-info">6</span> che è 6</p>
+            <p>
+              notiamo anche che 57 è piu vicino a
+              <span class="bg-success" style="--bs-bg-opacity: 0.5">64</span>
+              che non
+              <span class="bg-danger" style="--bs-bg-opacity: 0.5">49</span>,
+              infatti:
+            </p>
+            <ul>
+              <li>
+                <span class="bg-success" style="--bs-bg-opacity: 0.5">
+                  64-57=7
+                </span>
+              </li>
+              <li>
+                <span class="bg-danger" style="--bs-bg-opacity: 0.5">
+                  57-49=8
+                </span>
+              </li>
+            </ul>
+            <p>
+              Percui è facilmente intuibile che abbiamo trovato un valore
+              compreso tra 70 e 80, per cui abbiamo trovato la nostra decina
+              della soluzione.
+            </p>
+            <p>
+              Mentre per l'unità guardiamo semplicemente l'unità di 577<span
+                class="bg-info"
+                >6</span
+              >
+              che è 6
+            </p>
             <p>Per cui sarà istantaneo capire che si tratta di un 4 o un 6</p>
-            <p>E avendo osservato che 57 è maggiore o uguale del valore intermedio tra 49 e 64 (perciò o a eugual distanza o tendente al maggiore) <br>
-            allora il valore dell'unità è 6</p>
+            <p>
+              E avendo osservato che 57 è maggiore o uguale del valore
+              intermedio tra 49 e 64 (perciò o a eugual distanza o tendente al
+              maggiore) <br />
+              allora il valore dell'unità è 6
+            </p>
             <h3>Soluzione</h3>
-            <p>Si prendono le prime due cifre e analizzando il range in cui si trova (1,4,9,16,25,36,49,64,81,100) si stabilisce prendendo il valore del range minimo e calcolando la radice quadrata,
-              e si confronta le prime due cifra con il valore intermedio ai valori del minimo e del massimo.
+            <p>
+              Si prendono le prime due cifre e analizzando il range in cui si
+              trova (1,4,9,16,25,36,<span class="bg-info">49,64</span>,81,100)
+              si stabilisce prendendo il valore del range minimo (49) e
+              calcolando la radice quadrata, e si confronta le prime due cifra
+              con il valore intermedio ai valori del minimo e del massimo
+              (49+((64-49)/2) volendo anche arrotondato anche per eccesso,
+              poichè vogliamo sia una cosa fatta ad occhio.
             </p>
-            <p>Per cui con 5776: "57" è tra 49 e 64 perciò prendendo il valore minimo: &#8730;49=7</p>
-            <p>Ora si prende l'unità che è potenzialmente un 4 o un 6 ma grazie al confronto del mezzo capiamo che è 6</p>
-            <hr>
+            <p>
+              Per cui con 5776: "57" è tra 49 e 64 perciò prendendo il valore
+              minimo: &#8730;49=7
+            </p>
+            <p>
+              Ora si prende l'unità che è potenzialmente un 4 o un 6 ma grazie
+              al confronto del mezzo capiamo che è 6
+            </p>
+            <hr />
             <h3>Note</h3>
-            <p>Il discorso del confronto del valore intermedio può richiedere qualche secondo di calcolo in più solo per il caso 6 in comune, poiche 4 e 6 sono i più vicini tra loro. <br>
-              Mentre per tutti gli altri casi sarà facilmente riconoscibile l'unità da scegliere.
+            <p>
+              Il discorso del confronto del valore intermedio può richiedere
+              qualche secondo di calcolo in più solo per il caso 6 in comune,
+              poiche 4 e 6 sono i più vicini tra loro. <br />
+              Mentre per tutti gli altri casi sarà facilmente riconoscibile
+              l'unità da scegliere.
             </p>
-            <p>Per tagliare la testa al toro si può eseguire il quadrato del risultato per verificare sia valido</p>
+            <p>
+              Per tagliare la testa al toro si può eseguire il quadrato del
+              risultato per verificare sia valido
+            </p>
 
-            <p class="h1">Appena scopro come si prendono i primi due valori a sinistra preparo l'algoritmo</p>
-            <p>anche se con un calcolatore lo si può fare in pochi semplici passaggi &#128514;</p>
+            <h4>Risultato</h4>
+            <p class="fs-3">
+              <span class="bg-success p-2" style="--bs-bg-opacity: 0.5"
+                >76</span
+              >
+            </p>
 
-          
+            <p class="h1">
+              Appena scopro come si prendono i primi due valori a sinistra
+              preparo l'algoritmo
+            </p>
+            <p>
+              anche se con un calcolatore lo si può fare in pochi semplici
+              passaggi &#128514;
+            </p>
           </div>
         </div>
       </div>
