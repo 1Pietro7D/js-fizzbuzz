@@ -1,7 +1,7 @@
 console.log("hello world");
 
 // global var
-const gridHTML = document.getElementById("grid");
+const gridHTML = document.getElementById("bonus");
 const inputHTML = document.querySelector("input");
 
 // Start code
@@ -29,4 +29,14 @@ inputHTML.addEventListener("click", function () {
   }
 
   // End code
+
+  // article
+  const myarticle = document.querySelector("article");
+  myarticle.classList.remove("d-none");
+
+  const approfondimento = document.getElementById("approfondimento");
+  approfondimento.addEventListener("click", function () {
+    const paragraph = document.getElementById("paragraph");
+    paragraph.classList.remove("d-none");
+  });
 });

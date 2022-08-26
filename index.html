@@ -18,6 +18,167 @@
     <form action="">
       <input type="button" value="Click me" />
     </form>
-    <div id="grid" class="d-none"></div>
+
+    <div id="bonus" class="d-none">
+      <h1 class="bg-warning">LAVORI IN CORSO! PER ESERCIZIO BONUS</h1>
+    </div>
+
+    <article class="d-none">
+      <p>intanto se hai 5 minuti aspettando il bonus...</p>
+      <h1>Scoprendo di Pietro :D</h1>
+      <h2>Un aneddoto</h2>
+      <form action="">
+        <input
+          id="approfondimento"
+          type="button"
+          value="se hai 5 minuti e vuoi approffondire cliccami"
+        />
+      </form>
+      <div class="contenitor d-none" id="paragraph">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <p>
+              Ai bellissimi 12 anni della mia vita, nell'orrenda realtà
+              scolastisca si studiava il teorema di ruffini &#128560;
+            </p>
+            <h3>Il problema</h3>
+            <p>
+              Io trovavo che fosse altamente noioso come metodo, tutt'ora lo
+              trovo noioso.. e in più non si potevano usare le calcolatrici.. E
+              io volevo risolvere il problema in un range di 5 secondi.
+            </p>
+            <h3>L'analisi</h3>
+            <p>
+              Analizzando il contesto di applicazione, ovvero il fatto che i
+              problemi da risolvere erano quelli dati dalla scuola e la
+              soluzione di essi consisteva nel trovare la radice quadrata se un
+              numero intero ovvero un "quadrato perfetto", al contro se decimale
+              bastava racchiudere il "quadrato non perfetto" in una radice
+              quadrata.
+            </p>
+            <p>
+              I più le cifre dei problemi non superavano mai il 10000, ovvero il
+              risultato se intero non era mai superiore a 100.
+            </p>
+            <p>
+              Analizzando dei "quadrati perfetti" si nota subito che l'unità del
+              quadrato è uguale per le esponenze di un numero che iniza per:
+            </p>
+            <ul>
+              <li>
+                <p>caso 0</p>
+                <ul>
+                  <li>0*0=0</li>
+                </ul>
+              </li>
+              <li>
+                <p>caso 1 in comune</p>
+                <ul>
+                  <li>1*1=1</li>
+                  <li>9*9=81</li>
+                </ul>
+              </li>
+              <li>
+                <p>caso 4 in comune</p>
+                <ul>
+                  <li>2*2=4</li>
+                  <li>8*8=64</li>
+                </ul>
+              </li>
+              <li>
+                <p>caso 9 in comune</p>
+                <ul>
+                  <li>3*3=9</li>
+                  <li>7*7=49</li>
+                </ul>
+              </li>
+              <li>
+                <p>caso 6 in comune</p>
+                <ul>
+                  <li>4*4=16</li>
+                  <li>6*6=36</li>
+                </ul>
+              </li>
+              <li>
+                <p>caso 5 in comune</p>
+                <ul>
+                  <li>5*5=25</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>Strumenti</h3>
+            <p>
+              Un cervello umano limitato alle sue specifiche biologiche: <br />
+              con una capacità di calcolo delle tabelline e moltiplicazioni a 2
+              fattori veloce e il tutto rispetta le specifiche del problema .
+            </p>
+            <p>
+              Per cui mi devo adattare al poter usare solo i quadrati da 1 a 10,
+              poichè sono gli unici per cui posso "istantaneamente" trovare una
+              risposta
+            </p>
+
+            <h3>L'idea</h3>
+            <p>
+              Abbiamo un range di soluzioni che va da 1 a 100 e Non Intero.
+              <br />
+              Per cui il range di problema va da 0 a 10000. Se superiore il
+              metodo non vale più.
+            </p>
+            <p>
+              Per cui se 10000, sappiamo che per forza fa 100, facilmente
+              riconoscibile per il cervello. <br />
+              Se uguale o inferiore a 100 è un numero compreso da 0 a 10,
+              anch'essi facilmente riconoscibili ad occhio. Se il numero è
+              compreso tra 100 e 10000, allora andiamo ad analizzare le prime
+              due cifre, perciò le migliaglia se ci sono e di sicuro le
+              centinaia.
+            </p>
+            <h5>Esempio</h5>
+            <p>76<sup>2</sup>=<span class="bg-info">57</span>76</p>
+
+            <p>
+              Ora per l'occhio umano è facilemente riconoscibile che
+              <span class="bg-info">57</span> è
+              <span class="bg-success" style="--bs-bg-opacity: 0.5"
+                >maggiore di 49 (7<sup>2</sup>)</span
+              >
+              e
+              <span class="bg-danger" style="--bs-bg-opacity: 0.5"
+                >inferiore di 64(8<sup>2</sup>)</span
+              >
+            </p>
+            <p>notiamo anche che 57 è piu vicino a <span class="bg-success" style="--bs-bg-opacity: 0.5"
+              >64</span> che non <span class="bg-danger" style="--bs-bg-opacity: 0.5"
+              >49</span>, infatti:</p>
+              <ul>
+                <li><span class="bg-success" style="--bs-bg-opacity: 0.5">64-57=7</li>
+                <li><span class="bg-danger" style="--bs-bg-opacity: 0.5">57-49=8</li>
+              </ul>
+            <p>Percui è facilmente intuibile che abbiamo trovato un valore compreso tra 70 e 80, per cui abbiamo trovato la nostra decina della soluzione.</p>
+            <p>Mentre per l'unità guardiamo semplicemente l'unità di 577<span class="bg-info">6</span> che è 6</p>
+            <p>Per cui sarà istantaneo capire che si tratta di un 4 o un 6</p>
+            <p>E avendo osservato che 57 è maggiore o uguale del valore intermedio tra 49 e 64 (perciò o a eugual distanza o tendente al maggiore) <br>
+            allora il valore dell'unità è 6</p>
+            <h3>Soluzione</h3>
+            <p>Si prendono le prime due cifre e analizzando il range in cui si trova (1,4,9,16,25,36,49,64,81,100) si stabilisce prendendo il valore del range minimo e calcolando la radice quadrata,
+              e si confronta le prime due cifra con il valore intermedio ai valori del minimo e del massimo.
+            </p>
+            <p>Per cui con 5776: "57" è tra 49 e 64 perciò prendendo il valore minimo: &#8730;49=7</p>
+            <p>Ora si prende l'unità che è potenzialmente un 4 o un 6 ma grazie al confronto del mezzo capiamo che è 6</p>
+            <hr>
+            <h3>Note</h3>
+            <p>Il discorso del confronto del valore intermedio può richiedere qualche secondo di calcolo in più solo per il caso 6 in comune, poiche 4 e 6 sono i più vicini tra loro. <br>
+              Mentre per tutti gli altri casi sarà facilmente riconoscibile l'unitàda scegliere.
+            </p>
+            <p>Per tagliare la testa al toro si può eseguire il quadrato del risultato per verificare sia valido</p>
+
+            <p class="h1">Appena scopro come si prendono i primi due valori a sinistra preparo l'algoritmo</p>
+
+          
+          </div>
+        </div>
+      </div>
+    </article>
   </body>
 </html>
