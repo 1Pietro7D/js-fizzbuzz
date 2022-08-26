@@ -53,6 +53,7 @@ inputHTML.addEventListener("click", function () {
     });
 
     // aggiungo i div creati a grid
+
     grid.append(mySquare);
   }
 
@@ -67,5 +68,22 @@ inputHTML.addEventListener("click", function () {
     const paragraph = document.getElementById("paragraph");
     paragraph.classList.remove("d-none");
     // /article
+
+    // ora prendiamo i dati dal nostro calcolatore tradizionale
+    const calcTradizionale = document.getElementById("calc-tradizionale");
+    calcTradizionale.addEventListener("click", function () {
+      // qui prendiamo il valore dell'input
+      const mTradizionale = document.getElementById("m-tradizionale").value;
+      // e creiamo una variabile che calcola la radice quadrata
+      const risultatoTradizionale = Math.sqrt(mTradizionale);
+      // controlliamo che la radice quadrata sia un intero creando una variabile con il suo intero
+      const confrontoTradizionale = parseInt(risultatoTradizionale);
+
+      if (confrontoTradizionale == risultatoTradizionale) {
+        console.log(risultatoTradizionale);
+      } else {
+        console.log(mTradizionale);
+      }
+    });
   });
 });
