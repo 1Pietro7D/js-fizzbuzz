@@ -38,6 +38,20 @@ inputHTML.addEventListener("click", function () {
     }
     // /condition for output
 
+    mySquare.addEventListener("mouseenter", function () {
+      console.log("entro in " + squareIndex);
+      mySquare.style.backgroundColor = "green";
+    });
+    mySquare.addEventListener("mouseleave", function () {
+      console.log("esco da " + squareIndex);
+
+      mySquare.style.backgroundColor = "red";
+    });
+    mySquare.addEventListener("click", function () {
+      console.log("entro in " + squareIndex);
+      mySquare.style.backgroundColor = "blue";
+    });
+
     // aggiungo i div creati a grid
     grid.append(mySquare);
   }

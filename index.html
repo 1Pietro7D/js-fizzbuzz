@@ -26,18 +26,17 @@
 
     <article class="d-none">
       <p>intanto se hai 5 minuti aspettando il bonus...</p>
-      <h1>Alla scoperta di un Pietro impazzito :D</h1>
-      <h2>L'aneddoto</h2>
+      <h1 class="mb-4">Alla scoperta di un Pietro impazzito :D</h1>
+
       <form action="" class="mb-5 text-center">
-        <input
-          id="approfondimento"
-          type="button"
-          value="se hai 5 minuti e vuoi approffondire cliccami"
-        />
+        <a href="#paragraph" id="approfondimento" class="btn btn-info"
+          >se hai 5 minuti e vuoi approffondire cliccami</a
+        >
       </form>
-      <div class="contenitor d-none" id="paragraph">
-        <div class="row justify-content-center">
-          <div class="col-6">
+      <div class="d-none" id="paragraph">
+        
+          <div class="col-6 m-auto">
+            <h2>L'aneddoto</h2>
             <p>
               Ai bellissimi 12 anni della mia vita, nell'orrenda realtà
               scolastisca si studiava il teorema di ruffini &#128560;
@@ -242,14 +241,24 @@
             </p>
             <br />
 
-            <p class="h1">
-              Appena scopro come si prendono i primi due valori a sinistra
-              preparo l'algoritmo
+            <p class="h2">
+              Ora creo due input dove inserire la radice quadrata da calcolare,
+              il primo seguirà una logica ordinaria, il secondo seguirà la
+              logica del mio metodo.
             </p>
-            <p>
-              anche se con un calcolatore lo si può fare in pochi semplici
-              passaggi &#128514;
-            </p>
+            <form action="">
+              <label for="m-tradizionale">Metodo tradizionale</label>
+              <input type="number" min="0" max="9999" />
+              <input type="button" id="calc-tradizionale" value="Calcola" />
+              <span>Il tuo risultato è:</span
+              ><span id="result_tradizional"></span>
+            </form>
+            <form action="">
+              <label for="m-personale">Metodo a mente</label>
+              <input type="number" id="m-personale" min="0" max="9999" />
+              <input type="button" id="calc-mentale" value="Calcola" />
+              <span>Il tuo risultato è:</span><span id="result_mental"></span>
+            </form>
           </div>
         </div>
       </div>
