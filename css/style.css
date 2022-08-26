@@ -2,3 +2,20 @@ ul > li > ul {
   list-style-type: square;
   margin-bottom: 1rem;
 }
+#grid {
+  display: grid;
+  width: 100vh;
+  height: 100vh;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+.my-square {
+  width: 9vh;
+  height: 9vh;
+  border: 3px solid black;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+}
