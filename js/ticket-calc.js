@@ -105,7 +105,7 @@ inputHTML.addEventListener("click", function () {
       // qui prendiamo il valore dell'input
       const mMentale = document.getElementById("m-mentale").value;
       // faccio una analisi dell'elemento
-      let analisiMMentale = mMentale.constructor;
+      let analisiMMentale = typeof mMentale;
       console.log(analisiMMentale);
       // l'analisi dice che mMentale è una stringa
       let centinaia = mMentale.slice(0, -2);
