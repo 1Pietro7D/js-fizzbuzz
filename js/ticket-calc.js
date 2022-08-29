@@ -103,6 +103,7 @@ inputHTML.addEventListener("click", function () {
     const calcMentale = document.getElementById("calc-mentale");
     calcMentale.addEventListener("click", function () {
       document.getElementById("result_mentale2").innerHTML = "";
+      document.getElementById("result_mentale3").innerHTML = "";
       // qui prendiamo il valore dell'input
       const mMentale = document.getElementById("m-mentale").value;
       // faccio una analisi dell'elemento
@@ -162,8 +163,8 @@ inputHTML.addEventListener("click", function () {
                 risultatoMentale +
                 " poichè riconosciamo che " +
                 mMentale +
-                " è un quadrato che riconosciamo ad occhio";
-            } else if (mMentale >= quadratiConosciuti10) {
+                " è un quadrato che riconosciamo ad occhio e possiamo già escludere tutti i casi dello 0";
+            } else if (mMentale >= quadratiConosciuti10 && unità > 0) {
               console.log(quadratoSuccessivo);
 
               document.getElementById("result_mentale2").innerHTML =
@@ -175,8 +176,16 @@ inputHTML.addEventListener("click", function () {
                 quadratoSuccessivo +
                 " e possiamo ipotizzare che la decina del nostro risultato è " +
                 nRic;
-
-              // RIPRENDERE IL LAVORO DA QUI PER L'ANALISI DELL'UNITà
+            } else if (
+              mMentale > quadratiConosciuti10 &&
+              mMentale < quadratoSuccessivo * 100 &&
+              unità == 0
+            ) {
+              document.getElementById("result_mentale3").innerHTML =
+                "Riconosco chè l'unità è 0 ma ad occhio notiamo che " +
+                mMentale +
+                " non è un quadrato perfetto perciò il risultato è &radic;" +
+                mMentale;
             }
           }
         }
