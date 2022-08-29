@@ -102,6 +102,7 @@ inputHTML.addEventListener("click", function () {
     // calcolatore mentale
     const calcMentale = document.getElementById("calc-mentale");
     calcMentale.addEventListener("click", function () {
+      document.getElementById("result_mentale2").innerHTML = "";
       // qui prendiamo il valore dell'input
       const mMentale = document.getElementById("m-mentale").value;
       // faccio una analisi dell'elemento
@@ -116,7 +117,70 @@ inputHTML.addEventListener("click", function () {
         " e guardiamo l'unità " +
         unità;
 
-      // creiamo il confronto dei range
+      if (unità == 2 || unità == 3 || unità == 7 || unità == 8) {
+        document.getElementById("result_mentale").innerHTML =
+          "  L'unità escude che sia un quadrato perfetto perciò &radic;" +
+          mMentale;
+      } else {
+        document
+          .getElementById("result_mentale")
+          .prepend("  Bene l'unità non escude che sia un quadrato perfetto");
+        // e creiamo una variabile che calcola la radice quadrata
+        const risultatoMentale = Math.sqrt(mMentale);
+        // controlliamo che la radice quadrata sia un intero creando una variabile con il suo intero
+        const confrontMentale = parseInt(risultatoMentale);
+        // nei casi minori di 100
+        if (mMentale <= 100) {
+          if (confrontMentale == risultatoMentale) {
+            console.log(risultatoMentale);
+            document.getElementById("result_mentale2").innerHTML =
+              "<br>" + "E il risultato è " + risultatoMentale;
+          } else {
+            const simbol = "&radic;";
+
+            console.log(risultatoMentale);
+            document.getElementById("result_mentale2").innerHTML =
+              "<br>" +
+              "E il risultato è " +
+              simbol +
+              mMentale +
+              "  (Non è un quadrato perfetto)";
+          }
+        } else {
+          console.log("noi riconosciamo ad occhio questi quadrati");
+          for (let nRic = 1; nRic <= 10; nRic += 1) {
+            const quadratiConosciuti10 = nRic * nRic * 100;
+            const nSuccessivo = nRic + 1;
+            const quadratoSuccessivo = nSuccessivo * nSuccessivo;
+            const quadratiConosciuti = nRic * nRic;
+
+            console.log(quadratiConosciuti);
+            console.log(quadratiConosciuti10);
+            if (mMentale == quadratiConosciuti10) {
+              document.getElementById("result_mentale2").innerHTML =
+                "E il risultato è " +
+                risultatoMentale +
+                " poichè riconosciamo che " +
+                mMentale +
+                " è un quadrato che riconosciamo ad occhio";
+            } else if (mMentale >= quadratiConosciuti10) {
+              console.log(quadratoSuccessivo);
+
+              document.getElementById("result_mentale2").innerHTML =
+                "allora prendiamo le cifre sopra le centinaia ovvero " +
+                centinaia +
+                " e vediamo che è compreso tra " +
+                quadratiConosciuti +
+                " e " +
+                quadratoSuccessivo +
+                " e possiamo ipotizzare che la decina del nostro risultato è " +
+                nRic;
+
+              // RIPRENDERE IL LAVORO DA QUI PER L'ANALISI DELL'UNITà
+            }
+          }
+        }
+      }
 
       //fine calcolatore mentale
     });

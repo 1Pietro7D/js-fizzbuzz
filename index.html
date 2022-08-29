@@ -246,18 +246,21 @@
               il primo seguirà una logica ordinaria, il secondo seguirà la
               logica del mio metodo.
             </p>
-            <form class="my-4" action="">
+            <form class="my-4 align-middle" action="">
               <label for="m-tradizionale">Metodo tradizionale</label>
               <input type="number" id="m-tradizionale" min="0" max="10000" />
-              <input type="button" id="calc-tradizionale" value="Calcola" />
+              <div id="calc-tradizionale" class="btn btn-dark">Calcola</div>
               <span>Il tuo risultato è:</span
               ><span id="resultTradizionale"></span>
             </form>
             <form class="my-4" action="">
               <label for="m-mentale">Metodo a mente</label>
               <input type="number" id="m-mentale" min="0" max="10000" />
-              <input type="button" id="calc-mentale" value="Calcola" />
-              <span>Il tuo risultato è:</span><span id="result_mentale"></span>
+              <div id="calc-mentale" class="btn btn-dark">Calcola</div>
+              <span></span>
+              <span id="result_mentale"></span>
+              <br>
+              <span id="result_mentale2"> </span>
             </form>
             <div id="gridTwo" class="my-5"></div>
           </div>
